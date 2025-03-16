@@ -1,0 +1,55 @@
+(1)
+user_input = input("Введіть число: ")
+try:
+    number = float(user_input)
+    result = number * 2
+    result_str = str(result)
+    print("Результат обчислення:", result_str)
+except ValueError:
+    print("Помилка! Введено некоректне число.")
+
+
+(2)
+num1_str = input("Введіть перше число: ")
+num2_str = input("Введіть друге число: ")
+
+try:
+    num1 = float(num1_str)
+    num2 = float(num2_str)
+    
+    sum_result = num1 + num2
+    diff_result = num1 - num2
+    product_result = num1 * num2
+    
+    if num2 != 0:
+        division_result = num1 / num2
+    else:
+        division_result = "Не можна ділити на нуль"
+    
+    print(f"Сума: {num1} + {num2} = {sum_result}")
+    print(f"Різниця: {num1} - {num2} = {diff_result}")
+    print(f"Добуток: {num1} * {num2} = {product_result}")
+    print(f"Частка: {num1} / {num2} = {division_result}")
+
+except ValueError:3
+print("Помилка! Введено некоректне число.")
+
+
+(3)
+numbers_str = input("Введіть числа, розділені комами: ")
+
+numbers_list = numbers_str.split(", ")
+
+numbers = [float(num) for num in numbers_list]
+
+sum_result = sum(numbers)
+average_result = sum_result / len(numbers)
+
+print(f"Сума чисел: {sum_result}")
+print(f"Середнє значення: {average_result}")
+
+
+(4)
+number = float(input("Введіть число з плаваючою комою: "))
+formatted_number = "{:.2f}".format(number)
+print(f"Число з двома знаками після коми: {formatted_number}")
